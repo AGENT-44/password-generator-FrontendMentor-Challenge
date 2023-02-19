@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --background: #100f15;
+  --inner-box: #24232b;
+  --button: #a4ffaf;
+  --str-box: #18171f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  background-color: var(--background);
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.heading {
+  color: #848292;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.password-insert {
+  height: 70px;
+  width: 30%;
+  /* border: 1px solid red; */
+  background-color: var(--inner-box);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.afterGen {
+  color: white;
+}
+.beforeGen {
+  color: #57555e;
+}
+
+.password {
+  font-weight: 900;
+  font-size: 26px;
+  padding-left: 20px;
+  letter-spacing: 2px;
+  background-color: var(--inner-box);
+  border: none;
+  outline: none;
+  /* padding-top: ; */
+}
+.img {
+  margin-right: 15px;
+  /* position: absolute; */
+  right: 0;
+  /* left: 0; */
+}
+
+.img:hover {
+  fill: white;
+}
+
+.main {
+  margin-top: 20px;
+  height: 400px;
+  width: 30%;
+  background-color: var(--inner-box);
+}
+
+.characters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.charcL {
+  padding-left: 20px;
+  color: white;
+  padding-top: 20px;
+}
+.charcN {
+  color: var(--button);
+  padding-right: 20px;
+  font-size: 24px;
+  /* margin-right: 15px; */
+  padding-top: 20px;
+}
+
+.rangeBox {
+  height: 50px;
+  width: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.range {
+  width: 90%;
+  /* height: 10px; */
+  background: var(--button);
+  /* outline: none; */
+  /* border: 1px solid red; */
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+  width: 90%;
+  /* overflow: hidden; */
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  height: 25px;
+  border-radius: 100%;
+  width: 25px;
+  margin-top: -11px;
+  background: white;
+  /* box-shadow: -90px 0px 0px 5px red; */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--str-box);
+  height: 5px;
+}
+input[type="range"]::-ms-track {
+  background-color: var(--button) !important;
+}
+input[type="range"]::-webkit-slider-thumb:active {
+  background: black;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* border: 1px solid red; */
+}
+.boxes {
+  margin-top: 10px;
+  margin-left: 20px;
+  display: flex;
+  color: white;
+  letter-spacing: 1px;
+}
+.boxes input[type="checkbox"] {
+  margin-right: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--inner-box);
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  margin-top: 2px;
+  height: 1.15em;
+  border: 0.15em solid var(--button);
+  /* transform: translateY(-0.075em); */
+  /* outline: var(--button); */
+  display: grid;
+  place-content: center;
+}
+
+.boxes input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--button);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+.boxes input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.strengthBox {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  height: 60px;
+  width: 90%;
+  background-color: var(--str-box);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #57555e;
+  padding-left: 15px;
+}
+
+.bars {
+  display: flex;
+  margin-right: 20px;
+}
+.bars div {
+  height: 20px;
+  width: 10px;
+  margin-left: 5px;
+  /* background-color: red; */
+  border: 1px solid white;
+}
+.yellow {
+  background-color: yellow;
+}
+
+.text {
+  padding-right: 10px;
+  color: white;
+  font-weight: 700;
+}
+
+.btn {
+  height: 50px;
+  margin-top: 20px;
+  width: 90%;
+  margin-left: 20px;
+  background-color: var(--button);
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  /* word-spacing: 4px; */
+}
+
+.btn:active {
+  background-color: var(--inner-box);
+  border: 1px solid var(--button);
+  color: var(--button);
+}
+
+@media only screen and (min-width: 360px) {
+  .password-insert {
+    width: 90%;
+  }
+  .password {
+    width: 80%;
+  }
+  .main {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 575px) {
+  .password-insert {
+    width: 70%;
+  }
+  .password {
+    width: 90%;
+  }
+  .main {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .password-insert {
+    width: 50%;
+  }
+  .password {
+    width: 90%;
+  }
+  .main {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .password-insert {
+    width: 40%;
+  }
+  .password {
+    width: 90%;
+  }
+  .main {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .password-insert {
+    width: 30%;
+  }
+  .password {
+    width: 90%;
+  }
+  .main {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .password-insert {
+    width: 25%;
+  }
+  .password {
+    width: 90%;
+  }
+  .main {
+    width: 25%;
+  }
+}
